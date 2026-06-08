@@ -3,6 +3,10 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss'],
+  ssr:false,
+  app:{
+    baseURL:'https://github.com/Atom1c-B1rd/HTTP-Header-Inspector-Client'
+  },
   runtimeConfig:{
     public:{
       apiBase: process.env.NUXT_API_BASE ?? 'http://localhost:8000',
