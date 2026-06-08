@@ -15,12 +15,12 @@ jobs:
                     node-version: 20
 
             - run: npm install
-            - run: echo "API=${{ secrets.NUXT_API_BASE}}"
+            - run: echo "API=${{ vars.NUXT_API_BASE}}"
             - run: npm run generate
               env:
-                    NUXT_API_BASE: ${{ secrets.NUXT_API_BASE }}
+                    NUXT_API_BASE: ${{ vars.NUXT_API_BASE }}
 
             - uses: peaceiris/actions-gh-pages@v4
               with:
-                    github_token: ${{ secrets.GITHUB_TOKEN }}
+                    github_token: ${{ vars.GITHUB_TOKEN }}
                     publish_dir: .output/public
