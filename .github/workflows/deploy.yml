@@ -22,7 +22,7 @@ jobs:
               env:
                     NUXT_API_BASE: ${{ vars.NUXT_API_BASE }}
 
-            - uses: peaceiris/actions-gh-pages@v4
+            - uses: JamesIves/github-pages-deploy-action@v4
               with:
                     github_token: ${{ vars.GITHUB_TOKEN }}
                     publish_dir: .output/public
