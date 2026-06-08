@@ -5,7 +5,12 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   ssr:false,
   app:{
-    baseURL:'https://github.com/Atom1c-B1rd/HTTP-Header-Inspector-Client'
+    baseURL:'/HTTP-Header-Inspector-Client/'
+  },
+  nitro: {
+    prerender: {
+      failOnError: false,
+    },
   },
   runtimeConfig:{
     public:{
